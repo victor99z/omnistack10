@@ -10,7 +10,7 @@ routes.post('/devs', async (req , res) => {
 
     const { name = login, avatar_url, bio} = apiResponse.data;
 
-    console.log(avatar_url) 
+    console.log(avatar_url+"\n"+bio) 
 
     return res.json({ message: "works" });
 });
