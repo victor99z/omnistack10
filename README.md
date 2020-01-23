@@ -7,3 +7,10 @@
     - Mongodb
     - ReactJs
     - React Native
+
+> TODO
+
+- [x] Finalizar backend (api)
+- [ ] Finalizar fronend
+- [ ] Finalizar mobile
+
