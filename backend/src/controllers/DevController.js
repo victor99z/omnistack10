@@ -36,5 +36,37 @@ module.exports = {
     async index(req , res){
         const devs = await Dev.find({});
         return res.json(devs);
+    },
+    async show(req, res){
+        const { id } = req.params;
+
+        const dev = await Dev.find({ github_username : id });
+
+        return res.json({dev}); // short syntax 
+    },
+    async update(req, res){ 
+        const { id, bio, name, latitude, longitude } = req.params;
+        //let { } = Dev.find({ github_username : id });
+
+        const location ={
+            type: "Point",
+            coordinates: [longitude, latitude],
+        };
+
+        const update = await Dev.updateOne(
+        {
+            github_username : id,
+        },
+        {
+            $set:{
+                bio,
+                name,
+            }
+        }
+        )
+        return res.json(update);
+    },
+    async destroy(req, res){
+        
     }
 };
