@@ -45,28 +45,35 @@ module.exports = {
         return res.json({dev}); // short syntax 
     },
     async update(req, res){ 
-        const { id, bio, name, latitude, longitude } = req.params;
+        const { id, bio, name, latitude, longitude } = req.body;
         //let { } = Dev.find({ github_username : id });
 
-        const location ={
+        const location = {
             type: "Point",
             coordinates: [longitude, latitude],
         };
 
-        const update = await Dev.updateOne(
+        await Dev.updateOne(
         {
-            github_username : id,
+            github_username : id
         },
         {
-            $set:{
-                bio,
-                name,
-            }
-        }
-        )
-        return res.json(update);
+            github_username : id,
+            bio,
+            name,
+            location
+        })
+
+        return res.json({ message: "user updated" });
     },
     async destroy(req, res){
+        const {id:github_username} = req.params;
+
+        const response = await Dev.deleteOne({
+            github_username
+        })
+
+        return res.json({ message: "user removed" })
         
     }
 };
