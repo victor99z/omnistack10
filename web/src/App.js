@@ -24,13 +24,10 @@ function App() {
 
     async function handleAddDev(data){
         const response = await api.post('/devs',data)
-        console.log(data)
         setDevs([...devs, response.data]) // copio o array de devs e acrescento o dev adicionado.
     }
 
-    // FIXME: erro na api, nao está cadastrando o novo dev
     
-
     return (
     <div id="app">
         <aside>

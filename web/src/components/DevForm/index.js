@@ -27,7 +27,12 @@ function DevForm( {onSubmit} ){
 
     async function handleSubmit(e){
         e.preventDefault()
-        await onSubmit()
+        await onSubmit({
+            github_username,
+            techs,
+            longitude,
+            latitude
+        })
     }
 
     return (
