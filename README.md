@@ -1,6 +1,6 @@
-# <center> Semana omnistack 10 </center>
+<h1 align="center"> Semana Omnistack 10 </h1>
 
-### <strong>  Objetivo: </strong> Produzir um app (web e mobile) usando conceitos de api restful no back-end e aproveitando dos recursos da biblioteca ReacJs no front-end & mobile :purple_heart:
+### **Objetivo:** Produzir um app (web e mobile) usando conceitos de api restful no back-end e aproveitando dos recursos da biblioteca ReacJs no front-end & mobile :purple_heart:
 
 ### Tecnologias utilizadas:
     - Nodejs
