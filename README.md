@@ -1,4 +1,6 @@
-# Projeto desenvolvido para a semana omnistack 10
+# <center> Semana omnistack 10 </center>
+
+### <strong>  Objetivo: </strong> Produzir um app (web e mobile) usando conceitos de api restful no back-end e aproveitando dos recursos da biblioteca ReacJs no front-end & mobile :purple_heart:
 
 ### Tecnologias utilizadas:
     - Nodejs
@@ -7,10 +9,12 @@
     - Mongodb
     - ReactJs
     - React Native
+    - Expo
 
-> TODO
+> :pencil: TODO
 
-- [x] Finalizar backend (api)
-- [ ] Finalizar fronend
+- [x] Finalizar back-end (api)
+- [x] Finalizar front-end
 - [ ] Finalizar mobile
-
+- [ ] Implementar auth via github
+- [ ] Melhorar api (casos especias)
